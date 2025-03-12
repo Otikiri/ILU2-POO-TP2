@@ -26,7 +26,8 @@ public class BoundaryEmmenager {
 					break;
 
 				case 2:
-					controlEmmenager.ajouterGaulois(nomVisiteur, choixUtilisateur);
+					int force = Clavier.entrerEntier("Bienvenue "+nomVisiteur+"\nQuelle est votre force?");
+					controlEmmenager.ajouterGaulois(nomVisiteur, force);
 					break;
 
 				default:
