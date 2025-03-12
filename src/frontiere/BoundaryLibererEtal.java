@@ -10,7 +10,8 @@ public class BoundaryLibererEtal {
 	}
 
 	public void libererEtal(String nomVendeur) {
-		//TODO a completer
+		String[] donne= controlLibererEtal.libererEtal(nomVendeur);
+		//TODO
 	}
 
 }
