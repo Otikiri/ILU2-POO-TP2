@@ -52,7 +52,7 @@ public class Village {
 		donnees[0] = chef.getNom();
 		for (int i = 0; i < nbVillageois; i++) {
 			if (villageois[i] instanceof Druide) {
-				donnees[i + 1] = "le druide " + villageois[i].getNom();
+				donnees[i + 1] =  villageois[i].getNom();
 			} else {
 				donnees[i + 1] = villageois[i].getNom();
 			}
