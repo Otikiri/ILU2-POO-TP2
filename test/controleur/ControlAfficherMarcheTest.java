@@ -24,9 +24,24 @@ class ControlAfficherMarcheTest {
 	@Test
 	void testValeurRetourne() {
 		Gaulois test1 = new Gaulois("test1",1);
+		Gaulois test2 = new Gaulois("test2",1);
+		village.ajouterHabitant(test2);
 		village.ajouterHabitant(test1);
 		village.installerVendeur(test1,"testValue", 2);
-		assertNotNull(ctrlMarche.donnerInfoMarche());
+		
+		String[] valuesReceived = ctrlMarche.donnerInfoMarche();
+		String[] valuesExpected = {"test1","2","testValue"};
+		
+		assertNotNull(valuesReceived);
+		assertArrayEquals(valuesExpected, valuesReceived);
+		
+		village.installerVendeur(test2, "testValue2", 2);
+		String[] valuesExpected2 = {"test1","2","testValue","test2","2","testValue2"};
+		String[] valuesReceived2 = ctrlMarche.donnerInfoMarche();
+		
+		assertNotNull(valuesReceived);
+		assertArrayEquals(valuesExpected2, valuesReceived2);
 	}
+
 
 }
