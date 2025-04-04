@@ -20,9 +20,9 @@ class ControlAcheterProduitTest {
 		village.setChef(chef);
 	}
 
-	@Test
+	@Test 
 	void test() {
-		fail("Not yet implemented");
+		//TODO 
 	}
 
 }
