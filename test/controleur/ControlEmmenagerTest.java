@@ -39,6 +39,13 @@ class ControlEmmenagerTest {
 		assertFalse(ctlEm.isHabitant("Gau13"));
 	}
 	
+	@Test
+	public void testAjouterDruide() {
+		ctlEm.ajouterDruide("TestD1", 1, 5, 1);
+		assertFalse(ctlEm.isHabitant("TestD1"));
+		ctlEm.ajouterDruide("TestD1",1,1,5);
+		assertTrue(ctlEm.isHabitant("TestD1"));
+	}
 	
 	@Test
 	public void testChefisHab() {

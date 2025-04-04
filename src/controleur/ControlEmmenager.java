@@ -17,8 +17,10 @@ public class ControlEmmenager {
 
 	public void ajouterDruide(String nom, int force, int effetPotionMin,
 			int effetPotionMax) {
-		Druide druide = new Druide(nom, force, effetPotionMin, effetPotionMax);
-		village.ajouterHabitant(druide);
+		if(effetPotionMax>effetPotionMin) {
+			Druide druide = new Druide(nom, force, effetPotionMin, effetPotionMax);
+			village.ajouterHabitant(druide);
+		}
 
 	}
 
